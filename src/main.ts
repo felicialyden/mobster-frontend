@@ -1,8 +1,9 @@
 import './style.css'
-import { setupCounter } from './counter.ts'
-import ghpages from 'gh-pages'
 
-ghpages.publish('dist', function(err) { console.log(err)});
+const fetchMobs = async () => {
+  const data = await fetch('https://mobster-backend-production-094a.up.railway.app/')
+  const json = await data.json()
+  console.log(json)
+}
 
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+fetchMobs()
