@@ -6,7 +6,7 @@ const fetchMobs = async () => {
     {
       headers: {
         'Content-Type': 'application/json',
-        Accept: 'application/json',
+        'Accept': 'application/json',
       },
     }
   );
